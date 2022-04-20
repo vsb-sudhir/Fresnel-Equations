@@ -1,0 +1,688 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     28295,        680]
+NotebookOptionsPosition[     25592,        631]
+NotebookOutlinePosition[     26028,        648]
+CellTagsIndexPosition[     25985,        645]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Erp", "[", 
+   RowBox[{"thetai_", ",", " ", "n1_", ",", " ", "n2_"}], "]"}], " ", ":=", 
+  " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"n1", "*", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"ArcSin", "[", 
+         RowBox[{"(", 
+          RowBox[{"n1", "*", 
+           RowBox[{
+            RowBox[{"Sin", "[", "thetai", "]"}], "/", "n2"}]}], ")"}], "]"}], 
+        "]"}]}], " ", "-", " ", 
+      RowBox[{"n2", "*", 
+       RowBox[{"Cos", "[", "thetai", "]"}]}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"n1", "*", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"ArcSin", "[", 
+         RowBox[{"(", 
+          RowBox[{"n1", "*", 
+           RowBox[{
+            RowBox[{"Sin", "[", "thetai", "]"}], "/", "n2"}]}], ")"}], "]"}], 
+        "]"}]}], " ", "+", " ", 
+      RowBox[{"n2", "*", 
+       RowBox[{"Cos", "[", "thetai", "]"}]}]}], ")"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.859254084615634*^9, 3.859254143344118*^9}, {
+   3.859254230086526*^9, 3.859254328744501*^9}, {3.859254367391621*^9, 
+   3.8592543754709578`*^9}, {3.859254649880745*^9, 3.859254679770347*^9}, {
+   3.859254982081551*^9, 3.8592549845912237`*^9}, {3.8592550476528683`*^9, 
+   3.859255076414625*^9}, 3.859255984575027*^9, {3.859256437358572*^9, 
+   3.8592564451479473`*^9}, {3.859259791509564*^9, 3.859259799400341*^9}, {
+   3.8592599716875477`*^9, 3.859260006359429*^9}, {3.85927999993118*^9, 
+   3.8592800018858833`*^9}, 3.859280229373144*^9, {3.859280422464369*^9, 
+   3.8592804226390142`*^9}, {3.859280453262208*^9, 3.859280470519886*^9}, {
+   3.859340914986858*^9, 3.8593409205808764`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"cfb2a037-9535-4a02-b920-0563ce1ae148"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Erp", "[", 
+      RowBox[{
+       RowBox[{"thetai", "*", 
+        RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], "]"}],
+      ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"thetai", ",", "0", ",", "90"}], "}"}], ",", " ", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", "\"\<Ratio of Electric Field (Erp/Ei)\>\""}], 
+     ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", " ", 
+       RowBox[{
+       "\"\<Angle of Incidence (Degrees)\>\"", " ", ",", "\"\<Ratio\>\""}], 
+       "}"}]}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n1", ",", " ", "1", ",", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n2", ",", " ", "1", ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.859254102795463*^9, 3.859254139067897*^9}, {
+  3.859254343757715*^9, 3.8592543458398247`*^9}, {3.859254469660963*^9, 
+  3.859254475326593*^9}, {3.859254512185011*^9, 3.859254544408471*^9}, {
+  3.859254901278359*^9, 3.859254975928121*^9}, {3.859259945798132*^9, 
+  3.859259962264243*^9}, {3.859260013926814*^9, 3.8592600277236643`*^9}, {
+  3.859260064787272*^9, 3.8592600814120483`*^9}, {3.859260227452807*^9, 
+  3.859260244973092*^9}, {3.859269700524197*^9, 3.859269718697136*^9}, {
+  3.8592798744125633`*^9, 3.859279964977931*^9}, {3.859280005639579*^9, 
+  3.859280006383913*^9}, {3.8594496237430573`*^9, 3.859449630003241*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"c18ecb29-7136-40e5-ab20-f34dbade017d"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n1$$ = 1.33, $CellContext`n2$$ = 2.77, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n1$$], 1, 3}, {
+      Hold[$CellContext`n2$$], 1, 3}}, Typeset`size$$ = {
+    360., {81., 86.06625446324608}}, Typeset`update$$ = 0, Typeset`initDone$$,
+     Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`n1$$ = 1, $CellContext`n2$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`Erp[$CellContext`thetai (Pi/
+          180), $CellContext`n1$$, $CellContext`n2$$], {$CellContext`thetai, 
+         0, 90}, PlotLabel -> "Ratio of Electric Field (Erp/Ei)", 
+        AxesLabel -> {"Angle of Incidence (Degrees)", "Ratio"}], 
+      "Specifications" :> {{$CellContext`n1$$, 1, 3}, {$CellContext`n2$$, 1, 
+         3}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{406., {159.1875, 164.8125}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.8592549947279377`*^9, {3.8592550545493097`*^9, 3.859255078250512*^9}, 
+   3.859255969951189*^9, 3.859256056587817*^9, 3.859256446770029*^9, 
+   3.859259801499104*^9, {3.859260028533799*^9, 3.859260088752129*^9}, {
+   3.859260246211187*^9, 3.859260260686968*^9}, {3.859269631108911*^9, 
+   3.8592696364534407`*^9}, {3.859269711865265*^9, 3.859269720003544*^9}, {
+   3.859279781315352*^9, 3.8592797925432987`*^9}, {3.859279890844736*^9, 
+   3.859279965977127*^9}, 3.859280009509671*^9, 3.859280249594088*^9, {
+   3.8592804267663507`*^9, 3.859280478472509*^9}, 3.859286068590541*^9, {
+   3.859340924516738*^9, 3.859340926949972*^9}, {3.859445231483326*^9, 
+   3.859445233588892*^9}, {3.8594496304433804`*^9, 3.859449632417712*^9}},
+ CellLabel->"Out[29]=",ExpressionUUID->"11f498b1-47d2-4990-b309-105ebb899d57"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.859254380461564*^9, 3.859254383306892*^9}, {
+  3.8592545750189533`*^9, 3.859254596957752*^9}, {3.85925486384735*^9, 
+  3.859254924407742*^9}, {3.8592556194300613`*^9, 3.859255664796401*^9}, {
+  3.859256062414393*^9, 3.859256118783618*^9}, {3.8592563654893436`*^9, 
+  3.8592563823118563`*^9}, {3.8592564734412127`*^9, 3.8592565121154737`*^9}, {
+  3.859260367805003*^9, 3.859260369632978*^9}, {3.85928001318775*^9, 
+  3.859280057784156*^9}},ExpressionUUID->"a8cac6f5-4d80-4c7a-9051-\
+5d3e0cf5dbfe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ers", "[", 
+   RowBox[{"thetai_", ",", " ", "n1_", ",", " ", "n2_"}], "]"}], " ", ":=", 
+  " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"n1", "*", 
+       RowBox[{"Cos", "[", "thetai", "]"}]}], " ", "-", " ", 
+      RowBox[{"n2", "*", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"ArcSin", "[", 
+         RowBox[{"(", 
+          RowBox[{"n1", "*", 
+           RowBox[{
+            RowBox[{"Sin", "[", "thetai", "]"}], "/", "n2"}]}], ")"}], "]"}], 
+        "]"}]}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"n1", "*", 
+       RowBox[{"Cos", "[", "thetai", "]"}]}], " ", "+", " ", 
+      RowBox[{"n2", "*", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"ArcSin", "[", 
+         RowBox[{"(", 
+          RowBox[{"n1", "*", 
+           RowBox[{
+            RowBox[{"Sin", "[", "thetai", "]"}], "/", "n2"}]}], ")"}], "]"}], 
+        "]"}]}]}], ")"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.859280234151176*^9, 3.859280300787258*^9}, {
+  3.85928041870499*^9, 3.859280419077302*^9}, {3.859446683414569*^9, 
+  3.85944669549303*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"d394fa92-c7af-4ef9-9556-f0ecc64ea024"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.859259313370612*^9, 3.859259358708268*^9}, {
+   3.859259479244994*^9, 3.8592595277711487`*^9}, {3.859260589579941*^9, 
+   3.859260714851235*^9}, 
+   3.859280289553363*^9},ExpressionUUID->"a5e74b47-f12f-43fe-83f1-\
+f95331c258b0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Ers", "[", 
+      RowBox[{
+       RowBox[{"thetai", "*", 
+        RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], "]"}],
+      ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"thetai", ",", "0", ",", "90"}], "}"}], ",", " ", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", "\"\<Ratio of Electric Field (Ers/Ei)\>\""}], 
+     ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", " ", 
+       RowBox[{
+       "\"\<Angle of Incidence (Degrees)\>\"", " ", ",", "\"\<Ratio\>\""}], 
+       "}"}]}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n1", ",", " ", "1", ",", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n2", ",", " ", "1", ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.859280312804659*^9, 3.859280319202076*^9}, {
+  3.859449701256275*^9, 3.859449706691348*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"1def67ca-da83-485f-8ba6-9a3aba40e43c"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n1$$ = 1, $CellContext`n2$$ = 1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n1$$], 1, 3}, {
+      Hold[$CellContext`n2$$], 1, 3}}, Typeset`size$$ = {
+    360., {78., 82.27099162442954}}, Typeset`update$$ = 0, Typeset`initDone$$,
+     Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`n1$$ = 1, $CellContext`n2$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`Ers[$CellContext`thetai (Pi/
+          180), $CellContext`n1$$, $CellContext`n2$$], {$CellContext`thetai, 
+         0, 90}, PlotLabel -> "Ratio of Electric Field (Ers/Ei)", 
+        AxesLabel -> {"Angle of Incidence (Degrees)", "Ratio"}], 
+      "Specifications" :> {{$CellContext`n1$$, 1, 3}, {$CellContext`n2$$, 1, 
+         3}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{406., {134.6875, 140.3125}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.8592803205759706`*^9, 3.859280328211027*^9}, 
+   3.8592864058769712`*^9, 3.859446708376148*^9, 3.8594467687694798`*^9, 
+   3.8594497088040752`*^9},
+ CellLabel->"Out[30]=",ExpressionUUID->"32f2f99d-a140-49ca-b11b-4494c3c05f00"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Etp", "[", 
+   RowBox[{"thetai_", ",", " ", "n1_", ",", " ", "n2_"}], "]"}], " ", ":=", 
+  " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", "*", "n1", "*", 
+      RowBox[{"Cos", "[", "thetai", "]"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"n1", "*", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"ArcSin", "[", 
+         RowBox[{"(", 
+          RowBox[{"n1", "*", 
+           RowBox[{
+            RowBox[{"Sin", "[", "thetai", "]"}], "/", "n2"}]}], ")"}], "]"}], 
+        "]"}]}], " ", "+", " ", 
+      RowBox[{"n2", "*", 
+       RowBox[{"Cos", "[", "thetai", "]"}]}]}], ")"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.859281024564887*^9, 3.85928102473811*^9}, {
+  3.859281102112228*^9, 3.859281126154499*^9}, {3.859446857728297*^9, 
+  3.859446858473063*^9}, {3.8594497545362062`*^9, 
+  3.8594497573695087`*^9}},ExpressionUUID->"5cf46712-75a4-415c-a36f-\
+195ab98994e3"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.859259371828739*^9, 
+  3.859260586008746*^9},ExpressionUUID->"bfdb5029-ea9a-4883-b9b4-\
+70c0ccd72398"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Etp", "[", 
+      RowBox[{
+       RowBox[{"thetai", "*", 
+        RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], "]"}],
+      ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"thetai", ",", "0", ",", "90"}], "}"}], ",", " ", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", "\"\<Ratio of Electric Field (Etp/Ei)\>\""}], 
+     ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", " ", 
+       RowBox[{
+       "\"\<Angle of Incidence (Degrees)\>\"", " ", ",", "\"\<Ratio\>\""}], 
+       "}"}]}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n1", ",", " ", "1", ",", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n2", ",", " ", "1", ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8592811393141336`*^9, 3.859281145305698*^9}, {
+  3.859449834960881*^9, 3.859449840119975*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"9dfb53d8-1ffc-4330-b95f-ef16115161bf"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n1$$ = 1, $CellContext`n2$$ = 1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n1$$], 1, 3}, {
+      Hold[$CellContext`n2$$], 1, 3}}, Typeset`size$$ = {
+    360., {86., 89.6732333431101}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`n1$$ = 1, $CellContext`n2$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`Etp[$CellContext`thetai (Pi/
+          180), $CellContext`n1$$, $CellContext`n2$$], {$CellContext`thetai, 
+         0, 90}, PlotLabel -> "Ratio of Electric Field (Etp/Ei)", 
+        AxesLabel -> {"Angle of Incidence (Degrees)", "Ratio"}], 
+      "Specifications" :> {{$CellContext`n1$$, 1, 3}, {$CellContext`n2$$, 1, 
+         3}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{406., {142.1875, 147.8125}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.859281145799019*^9, 3.859281148429379*^9}, 
+   3.859286409468932*^9, {3.8594468770409822`*^9, 3.8594469015995207`*^9}, 
+   3.859449842500005*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"d7d2dcef-47fb-48cd-a43d-d72a2f563250"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ets", "[", 
+   RowBox[{"thetai_", ",", " ", "n1_", ",", " ", "n2_"}], "]"}], " ", ":=", 
+  " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", "*", "n1", "*", 
+      RowBox[{"Cos", "[", "thetai", "]"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"n1", "*", 
+       RowBox[{"Cos", "[", "thetai", "]"}]}], " ", "+", " ", 
+      RowBox[{"n2", "*", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"ArcSin", "[", 
+         RowBox[{"(", 
+          RowBox[{"n1", "*", 
+           RowBox[{
+            RowBox[{"Sin", "[", "thetai", "]"}], "/", "n2"}]}], ")"}], "]"}], 
+        "]"}]}]}], ")"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.859281273331399*^9, 3.859281300723156*^9}, {
+  3.8594469679365873`*^9, 3.859446968814847*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"d5f04a5d-7568-4a31-84d8-b91b176689df"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"Ets", "[", 
+      RowBox[{
+       RowBox[{"thetai", "*", 
+        RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], "]"}],
+      ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"thetai", ",", "0", ",", "90"}], "}"}], ",", " ", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", "\"\<Ratio of Electric Field (Ets/Ei)\>\""}], 
+     ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", " ", 
+       RowBox[{
+       "\"\<Angle of Incidence (Degrees)\>\"", " ", ",", "\"\<Ratio\>\""}], 
+       "}"}]}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n1", ",", " ", "1", ",", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n2", ",", " ", "1", ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.859260582602903*^9, 3.859260582614386*^9}, {
+  3.859281312901785*^9, 3.859281319626567*^9}, {3.859449907858336*^9, 
+  3.859449913788878*^9}},ExpressionUUID->"9b647357-d32d-4a3f-b17a-\
+2fcea53d3267"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n1$$ = 1.33, $CellContext`n2$$ = 2.77, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n1$$], 1, 3}, {
+      Hold[$CellContext`n2$$], 1, 3}}, Typeset`size$$ = {
+    360., {72., 75.65292522792606}}, Typeset`update$$ = 0, Typeset`initDone$$,
+     Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`n1$$ = 1, $CellContext`n2$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        $CellContext`Ets[$CellContext`thetai (Pi/
+          180), $CellContext`n1$$, $CellContext`n2$$], {$CellContext`thetai, 
+         0, 90}, PlotLabel -> "Ratio", 
+        AxesLabel -> {
+         "Angle of Incidence (Degrees)", "Ratio of Electric Field (Ets/Ei)"}],
+       "Specifications" :> {{$CellContext`n1$$, 1, 3}, {$CellContext`n2$$, 1, 
+         3}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{406., {149.1875, 154.8125}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.859281320311861*^9, 3.859281327993334*^9}, 
+   3.859286412856554*^9, {3.859446972534253*^9, 3.859446998355797*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"d770a92a-4c0d-499c-bf33-8de39df9f054"]
+}, Open  ]],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.8592864193647833`*^9},ExpressionUUID->"aacfccc4-2d99-4ffa-9a43-\
+58e919884c4f"],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{"Erp", "[", 
+    RowBox[{"x", ",", " ", "1.33", ",", " ", "2.77"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", " ", 
+     RowBox[{"Pi", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.859448630137877*^9, 3.859448733110724*^9}, {
+   3.8594487884169407`*^9, 3.8594488192989264`*^9}, {3.8594488805190983`*^9, 
+   3.8594489445567513`*^9}, 3.8594499379217987`*^9},
+ CellLabel->"In[32]:=",ExpressionUUID->"f6b0e62f-f7c2-40dc-a0b3-d9dc5216908c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"x", "\[Rule]", "1.123158994520557`"}], "}"}]], "Input",
+ CellChangeTimes->{{3.859450290034726*^9, 
+  3.8594502914698257`*^9}},ExpressionUUID->"8431d423-2b7c-452d-8d71-\
+90056bbef33e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"x", "\[Rule]", "1.123158994520557`"}], "}"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.859448947628317*^9, 
+  3.859448976041253*^9}},ExpressionUUID->"db0110fd-45d5-413e-bb1e-\
+10860ce1bdb7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"x", "\[Rule]", "1.123158994520557`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.859448952985635*^9, 3.8594489729649687`*^9}},
+ CellLabel->"Out[27]=",ExpressionUUID->"eeb0cfc1-33cf-4430-8a4c-29c0ae4ac8bb"],
+
+Cell[BoxData[
+ RowBox[{"Value", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    FractionBox["1", "180"], " ", "\[Pi]", " ", 
+    RowBox[{"(", 
+     RowBox[{"x", "\[Rule]", "1.123158994520557`"}], ")"}]}], "}"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{{3.859448952985635*^9, 3.859448972968484*^9}},
+ CellLabel->"Out[28]=",ExpressionUUID->"8e93663b-74cd-49a8-9635-5c06df092db1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Erp", "[", 
+        RowBox[{
+         RowBox[{"thetai", "*", 
+          RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], 
+        "]"}], ",", 
+       RowBox[{"Ers", "[", 
+        RowBox[{
+         RowBox[{"thetai", "*", 
+          RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], 
+        "]"}], ",", 
+       RowBox[{"Etp", "[", 
+        RowBox[{
+         RowBox[{"thetai", "*", 
+          RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Ets", "[", 
+        RowBox[{
+         RowBox[{"thetai", "*", 
+          RowBox[{"Pi", "/", "180"}]}], ",", " ", "n1", ",", " ", "n2"}], 
+        "]"}]}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"thetai", ",", "0", ",", "90"}], "}"}], ",", " ", 
+     RowBox[{
+     "PlotLabel", "\[Rule]", "\"\<Ratio of Electric Field (Ers/Ei)\>\""}], 
+     ",", " ", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", " ", 
+       RowBox[{
+       "\"\<Angle of Incidence (Degrees)\>\"", " ", ",", "\"\<Ratio\>\""}], 
+       "}"}]}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n1", ",", " ", "1", ",", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"n2", ",", " ", "1", ",", " ", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.859450335508657*^9, 3.85945035613861*^9}, {
+  3.85945040894672*^9, 3.8594504092713537`*^9}, {3.8594504607152*^9, 
+  3.859450461187491*^9}},ExpressionUUID->"349ea6e1-0018-44d1-a6df-\
+ca4c1c7b22cf"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n1$$ = 1.33, $CellContext`n2$$ = 2.77, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n1$$], 1, 3}, {
+      Hold[$CellContext`n2$$], 1, 3}}, Typeset`size$$ = {
+    360., {79., 84.440115216207}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`n1$$ = 1, $CellContext`n2$$ = 1}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`Erp[$CellContext`thetai (Pi/
+           180), $CellContext`n1$$, $CellContext`n2$$], 
+         $CellContext`Ers[$CellContext`thetai (Pi/
+           180), $CellContext`n1$$, $CellContext`n2$$], 
+         $CellContext`Etp[$CellContext`thetai (Pi/
+           180), $CellContext`n1$$, $CellContext`n2$$]}, {$CellContext`thetai,
+          0, 90}, PlotLabel -> "Ratio of Electric Field (Ers/Ei)", 
+        AxesLabel -> {"Angle of Incidence (Degrees)", "Ratio"}], 
+      "Specifications" :> {{$CellContext`n1$$, 1, 3}, {$CellContext`n2$$, 1, 
+         3}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{406., {157.1875, 162.8125}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.8594503572538557`*^9, 3.8594503665818157`*^9}, {
+  3.859450410809361*^9, 3.859450424723071*^9}},
+ CellLabel->"Out[34]=",ExpressionUUID->"953414a7-552b-4460-be64-285e07bf5177"]
+}, Open  ]]
+},
+WindowSize->{970.5, 528.},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+TaggingRules-><|"TryRealOnly" -> False|>,
+FrontEndVersion->"13.0 for Linux x86 (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"81fe633a-e8c5-41c8-871f-ee885b98655a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1745, 41, 75, "Input",ExpressionUUID->"cfb2a037-9535-4a02-b920-0563ce1ae148"],
+Cell[CellGroupData[{
+Cell[2328, 65, 1545, 33, 54, "Input",ExpressionUUID->"c18ecb29-7136-40e5-ab20-f34dbade017d"],
+Cell[3876, 100, 2648, 48, 343, "Output",ExpressionUUID->"11f498b1-47d2-4990-b309-105ebb899d57"]
+}, Open  ]],
+Cell[6539, 151, 545, 8, 29, "Input",ExpressionUUID->"a8cac6f5-4d80-4c7a-9051-5d3e0cf5dbfe"],
+Cell[7087, 161, 1194, 34, 75, "Input",ExpressionUUID->"d394fa92-c7af-4ef9-9556-f0ecc64ea024"],
+Cell[8284, 197, 277, 5, 29, "Input",ExpressionUUID->"a5e74b47-f12f-43fe-83f1-f95331c258b0"],
+Cell[CellGroupData[{
+Cell[8586, 206, 1008, 26, 54, "Input",ExpressionUUID->"1def67ca-da83-485f-8ba6-9a3aba40e43c"],
+Cell[9597, 234, 2059, 40, 294, "Output",ExpressionUUID->"32f2f99d-a140-49ca-b11b-4494c3c05f00"]
+}, Open  ]],
+Cell[11671, 277, 948, 26, 32, "Input",ExpressionUUID->"5cf46712-75a4-415c-a36f-195ab98994e3"],
+Cell[12622, 305, 150, 3, 29, "Input",ExpressionUUID->"bfdb5029-ea9a-4883-b9b4-70c0ccd72398"],
+Cell[CellGroupData[{
+Cell[12797, 312, 1010, 26, 54, "Input",ExpressionUUID->"9dfb53d8-1ffc-4330-b95f-ef16115161bf"],
+Cell[13810, 340, 2056, 40, 309, "Output",ExpressionUUID->"d7d2dcef-47fb-48cd-a43d-d72a2f563250"]
+}, Open  ]],
+Cell[15881, 383, 870, 24, 32, "Input",ExpressionUUID->"d5f04a5d-7568-4a31-84d8-b91b176689df"],
+Cell[CellGroupData[{
+Cell[16776, 411, 1035, 27, 54, "Input",ExpressionUUID->"9b647357-d32d-4a3f-b17a-2fcea53d3267"],
+Cell[17814, 440, 2042, 40, 323, "Output",ExpressionUUID->"d770a92a-4c0d-499c-bf33-8de39df9f054"]
+}, Open  ]],
+Cell[19871, 483, 149, 3, 51, "Input",ExpressionUUID->"aacfccc4-2d99-4ffa-9a43-58e919884c4f"],
+Cell[20023, 488, 539, 11, 32, "Input",ExpressionUUID->"f6b0e62f-f7c2-40dc-a0b3-d9dc5216908c"],
+Cell[20565, 501, 223, 5, 29, InheritFromParent,ExpressionUUID->"8431d423-2b7c-452d-8d71-90056bbef33e"],
+Cell[CellGroupData[{
+Cell[20813, 510, 261, 7, 51, InheritFromParent,ExpressionUUID->"db0110fd-45d5-413e-bb1e-10860ce1bdb7"],
+Cell[21077, 519, 243, 4, 33, "Output",ExpressionUUID->"eeb0cfc1-33cf-4430-8a4c-29c0ae4ac8bb"],
+Cell[21323, 525, 367, 9, 48, "Output",ExpressionUUID->"8e93663b-74cd-49a8-9635-5c06df092db1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21727, 539, 1614, 44, 99, "Input",ExpressionUUID->"349ea6e1-0018-44d1-a6df-ca4c1c7b22cf"],
+Cell[23344, 585, 2232, 43, 339, "Output",ExpressionUUID->"953414a7-552b-4460-be64-285e07bf5177"]
+}, Open  ]]
+}
+]
+*)
+
